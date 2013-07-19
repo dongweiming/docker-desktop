@@ -30,7 +30,6 @@ RUN echo "deb-src http://mirrors.sohu.com/ubuntu/ quantal-security main restrict
 RUN echo "deb-src http://mirrors.sohu.com/ubuntu/ quantal-updates main restricted universe multiverse" >> /etc/apt/sources.list
 RUN echo "deb-src http://mirrors.sohu.com/ubuntu/ quantal-proposed main restricted universe multiverse" >> /etc/apt/sources.list
 RUN echo "deb-src http://mirrors.sohu.com/ubuntu/ quantal-backports main restricted universe multiverse" >> /etc/apt/sources.list
-EOF
 
 RUN apt-get update
 
