@@ -20,6 +20,19 @@
 FROM ubuntu:12.10
 MAINTAINER Roberto G. Hashioka "roberto_hashioka@hotmail.com"
 
+RUN cat > /etc/apt/sources.list << EOF
+deb http://mirrors.sohu.com/ubuntu/ quantal main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ quantal-security main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ quantal-updates main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ quantal-proposed main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ quantal-backports main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ quantal main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ quantal-security main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ quantal-updates main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ quantal-proposed main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ quantal-backports main restricted universe multiverse
+EOF
+
 RUN apt-get update
 
 # Set the env variable DEBIAN_FRONTEND to noninteractive
